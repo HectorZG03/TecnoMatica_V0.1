@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/azul_marino"
+  tools:context=".RegistrarEquipo">
+
+  <com.google.android.material.appbar.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    app:elevation="0dp">
+
+    <androidx.appcompat.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      app:title="Registro de Equipo"
+      app:titleTextColor="@color/blanco"/>
+  </com.google.android.material.appbar.AppBarLayout>
+
+  <androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:padding="16dp">
+
+      <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:cardBackgroundColor="#3D4FD1FE"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="16dp">
+
+          <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="Nombre del Cliente"
+            app:boxBackgroundColor="#4D4FD1FE"
+            app:boxStrokeColor="@color/blanco"
+            app:hintTextColor="@color/blanco">
+
+            <com.google.android.material.textfield.TextInputEditText
+              android:id="@+id/clientNameEditText"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:textColor="@color/blanco"/>
+          </com.google.android.material.textfield.TextInputLayout>
+
+          <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="Tipo de Equipo"
+            app:boxBackgroundColor="#4D4FD1FE"
+            app:boxStrokeColor="@color/blanco"
+            app:hintTextColor="@color/blanco">
+
+            <com.google.android.material.textfield.TextInputEditText
+              android:id="@+id/equipmentTypeEditText"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:textColor="@color/blanco"/>
+          </com.google.android.material.textfield.TextInputLayout>
+
+          <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="Descripción del Problema"
+            app:boxBackgroundColor="#4D4FD1FE"
+            app:boxStrokeColor="@color/blanco"
+            app:hintTextColor="@color/blanco">
+
+            <com.google.android.material.textfield.TextInputEditText
+              android:id="@+id/problemDescriptionEditText"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:inputType="textMultiLine"
+              android:lines="3"
+              android:textColor="@color/blanco"/>
+          </com.google.android.material.textfield.TextInputLayout>
+
+          <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="Asignar Técnico"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            app:boxBackgroundColor="#4D4FD1FE"
+            app:boxStrokeColor="@color/blanco"
+            app:hintTextColor="@color/blanco">
+
+            <AutoCompleteTextView
+              android:id="@+id/technicianAutoCompleteTextView"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:inputType="none"
+              android:textColor="@color/blanco"/>
+          </com.google.android.material.textfield.TextInputLayout>
+
+          <com.google.android.material.button.MaterialButton
+            android:id="@+id/registerEquipmentButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registrar Equipo"
+            android:textColor="@color/azul_marino"
+            app:backgroundTint="@color/blanco"/>
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
